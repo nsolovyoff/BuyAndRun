@@ -1,0 +1,47 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:800i|Roboto:900&display=swap" rel="stylesheet">
+</head>
+<body>
+<ngx-spinner></ngx-spinner>
+<div class="top-bar">
+  <div class="centered">
+    <a id="logo" href="/">Buy&Run</a>
+    <div class="search">
+      <form (submit)="onSearch()">
+        <input type="text" name="formSearchQuery" placeholder="Search something" [(ngModel)]="formSearchQuery">
+      </form>
+    </div>
+    <div *ngIf="categories" class="categories-menu">
+      <ng-container *ngFor="let category of categories">
+        <a href='/category/{{category["id"]}}'>
+          <ng-container *ngIf='searchQuery == category["id"]'>
+            <b>{{category["title"]}}</b>
+          </ng-container>
+          <ng-container *ngIf='searchQuery != category["id"]'>
+            {{category["title"]}}
+          </ng-container>
+        </a>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="header-main">
+    Results for search <b>{{searchQuery}}</b>:
+  </div>
+  <div *ngIf="lots" class="main-container">
+    <ng-container *ngFor="let lot of lots">
+      <div class="card">
+          <img src='{{lot["imageUrl"]}}' style="width:100%">
+        <div class="card-container">
+          <p>{{lot["title"]}}</p>
+          <h4><b>{{lot["bid"]}}$</b></h4>
+          <a href='/lot/{{lot["id"]}}'>BUY NOW</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <footer></footer>
+</div>
+</body>
+

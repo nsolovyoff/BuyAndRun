@@ -1,0 +1,75 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:800i|Roboto:900&display=swap" rel="stylesheet">
+</head>
+<body>
+<ngx-spinner></ngx-spinner>
+<div class="top-bar secondary">
+  <div class="secondary-centered">
+    <div id="secondary-logo">
+      <a href="/">Buy&Run</a>
+    </div>
+    <div class="secondary-search">
+      <form (submit)="onSearch()">
+        <input type="text" name="searchQuery" placeholder="Search something" [(ngModel)]="searchQuery">
+      </form>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="lot-container">
+    <div class="header-main">
+      Add new lot
+    </div>
+    <div class="lot-card">
+      <form (ngSubmit)="onCreate()">
+        <div class="lot-image-container">
+
+          <div class="header-login">
+            Specify lot title
+          </div>
+          <br><textarea name="title" rows="2" [(ngModel)]="title"></textarea>
+          <br><br><br>
+          <div class="input-block">
+            <b>Lot image: </b><br><input type="file" name="lotImage" value="" ngModel (change)="getFiles($event)">
+          </div>
+          <br><br>
+          <b>Category:</b>
+          <br>
+          <select name="categoryId" [(ngModel)]="categoryId">
+            <ng-container *ngFor="let category of categories">
+              <option value='{{category["id"]}}'>{{category["title"]}}</option>
+            </ng-container>
+          </select>
+        </div>
+        <div class="lot-content-container">
+          <div class="lot-content-padding">
+
+            <div class="header-login">
+              Create product description
+            </div>
+            <br>
+            <textarea name="description" rows="12" [(ngModel)]="description"></textarea>
+            <br><br>
+            <div class="input-block">
+              <b>Buy now price: </b><br><input class="bid-input" type="text" name="buyNowPrice" value="" [(ngModel)]="buyNowPrice">
+            </div>
+            <div class="input-block">
+              <b>Starting price: </b><br><input class="bid-input" type="text" name="bid" value="" [(ngModel)]="bid">
+            </div>
+            <div class="input-block">
+              <b>End date: </b><br>
+              <input class="bid-input" type="datetime-local" name="expiring" value="2021-06-01T08:30" [(ngModel)]="expiring">
+            </div>
+            <br><br>
+            <button type="submit">PUBLISH</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <a href="/">Help/About</a>
+  </footer>
+</div>
+</body>
+

@@ -1,0 +1,12 @@
+/Users/nikita/RiderProjects/BuyAndRun/BLL/bin/Debug/netcoreapp3.1/BLL.deps.json
+/Users/nikita/RiderProjects/BuyAndRun/BLL/bin/Debug/netcoreapp3.1/BLL.dll
+/Users/nikita/RiderProjects/BuyAndRun/BLL/bin/Debug/netcoreapp3.1/BLL.pdb
+/Users/nikita/RiderProjects/BuyAndRun/BLL/bin/Debug/netcoreapp3.1/DAL.dll
+/Users/nikita/RiderProjects/BuyAndRun/BLL/bin/Debug/netcoreapp3.1/DAL.pdb
+/Users/nikita/RiderProjects/BuyAndRun/BLL/obj/Debug/netcoreapp3.1/BLL.csprojAssemblyReference.cache
+/Users/nikita/RiderProjects/BuyAndRun/BLL/obj/Debug/netcoreapp3.1/BLL.csproj.CoreCompileInputs.cache
+/Users/nikita/RiderProjects/BuyAndRun/BLL/obj/Debug/netcoreapp3.1/BLL.AssemblyInfoInputs.cache
+/Users/nikita/RiderProjects/BuyAndRun/BLL/obj/Debug/netcoreapp3.1/BLL.AssemblyInfo.cs
+/Users/nikita/RiderProjects/BuyAndRun/BLL/obj/Debug/netcoreapp3.1/BLL.csproj.CopyComplete
+/Users/nikita/RiderProjects/BuyAndRun/BLL/obj/Debug/netcoreapp3.1/BLL.dll
+/Users/nikita/RiderProjects/BuyAndRun/BLL/obj/Debug/netcoreapp3.1/BLL.pdb

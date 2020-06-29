@@ -1,0 +1,63 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:800i|Roboto:500&display=swap" rel="stylesheet">
+</head>
+<body>
+<ngx-spinner></ngx-spinner>
+<div class="top-bar secondary">
+  <div class="secondary-centered">
+    <div id="secondary-logo">
+      <a href="/">Buy&Run</a>
+    </div>
+    <div class="secondary-toolbar" >
+      <a href="/">Login</a>
+    </div>
+  </div>
+</div>
+<div class="secondary-main">
+  <div class="register-container">
+    <div class="login-card">
+      <div class="centered">
+        <div id="login-logo">
+          Buy&Run
+        </div>
+      </div>
+      <form *ngIf="!success" #f="ngForm" (ngSubmit)="onSubmit()">
+        <div class="header-login">
+          Your username
+        </div>
+        <input class="login-input" type="text" name="userName" [(ngModel)]="userRegistration.userName" required>
+        <br><br>
+        <div class="header-login">
+          Your email
+        </div>
+        <input class="login-input" type="email" name="email" #email="ngModel" [(ngModel)]="userRegistration.email" required>
+        <small [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">Please enter a valid email</small>
+        <br><br>
+        <div class="header-login">
+          Your full name
+        </div>
+        <input class="login-input" type="text" name="name" [(ngModel)]="userRegistration.name" required>
+        <br><br>
+        <div class="header-login">
+          Your password
+        </div>
+        <input class="login-input" type="password" name="password" [(ngModel)]="userRegistration.password" required>
+        <br><br>
+        <div class="header-login">
+          Your profile photo:
+        </div>
+        <input type="file" name="userImage" value="" ngModel (change)="getFiles($event)">
+        <br><br><br>
+        <div class="centered">
+          <button type="submit">REGISTER</button>
+        </div>
+      </form>
+      <div *ngIf="success" class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Your account was created successfully, <a routerLink="/login">Please login</a> to continue.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+

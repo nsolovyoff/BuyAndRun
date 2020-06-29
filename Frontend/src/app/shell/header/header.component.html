@@ -1,0 +1,13 @@
+<header>
+  <div class="toolbar" >
+    <ng-container *ngIf="!isAuthenticated">
+      <a routerLink="/login">Log in</a>
+      <a routerLink="/register">Register</a>
+    </ng-container>
+    <ng-container *ngIf="isAuthenticated">
+      <a routerLink="/lot/create">Create lot</a>
+      <a routerLink="/profile">Profile</a>
+      <a (click)="signout()" href="javascript:void(0)">Signout {{name}}</a>
+    </ng-container>
+  </div>
+</header>

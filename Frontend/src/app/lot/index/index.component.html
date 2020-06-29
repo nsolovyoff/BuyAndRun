@@ -1,0 +1,61 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:800i|Roboto:900&display=swap" rel="stylesheet">
+</head>
+<body>
+<ngx-spinner></ngx-spinner>
+<div class="top-bar secondary">
+  <div class="secondary-centered">
+    <div id="secondary-logo">
+      <a href="/">Buy&Run</a>
+    </div>
+    <div class="secondary-search">
+      <form (submit)="onSearch()">
+        <input type="text" name="searchQuery" placeholder="Search something" [(ngModel)]="searchQuery">
+      </form>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div *ngIf="lot" class="lot-container">
+    <div class="header-main">
+      {{lot["title"]}}
+    </div>
+    <div class="lot-card">
+      <div class="lot-image-container">
+        <img src='{{lot["imageUrl"]}}' style="width:100%">
+      </div>
+      <div class="lot-content-container">
+        <div class="lot-content-padding">
+          <b>Description:</b>
+          <p>{{lot["description"]}}</p>
+          <ng-container *ngIf="isWinner">
+            <br><b>Congratulations!</b>  You won the auction. Contact lot owner {{lot["user"]}} by email {{ownerEmail}} to get your lot
+          </ng-container>
+          <ng-container *ngIf="isExpired && !isWinner">
+            <br> Auction is ended. <b>{{lot["bidUser"]}}</b> has won
+          </ng-container>
+          <ng-container *ngIf="!isExpired">
+            <br><b>Expiring at: </b>{{lot["expiring"]}}
+            <br>Current price: <b>{{lot["bid"]}}$</b> Last updated by <b>{{lot["bidUser"]}}</b>
+            <ng-container *ngIf="isWrongBid">
+              <b><br>New bid must be higher than previous</b>
+            </ng-container>
+            <ng-container *ngIf="!isOwner">
+              <form (submit)="onMakeBid()">
+                <br><input class="bid-input" type="text" name="bid" value="" [(ngModel)]="bid">
+                <button type="submit">MAKE A BID</button> or
+              </form>
+              <br><br>
+              <button (click)="onBuyNow()">BUY NOW</button> for <b>{{lot["buyNowPrice"]}}$</b>
+            </ng-container>
+          </ng-container>
+          <ng-container *ngIf="isOwner">
+            <br><button (click)="onDelete()">DELETE LOT</button>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+

@@ -1,0 +1,44 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:800i|Roboto:900&display=swap" rel="stylesheet">
+</head>
+<body>
+<ngx-spinner></ngx-spinner>
+<div class="top-bar">
+  <div class="centered">
+    <a id="logo" href="/">Buy&Run</a>
+    <div class="search">
+      <form (submit)="onSearch()">
+        <input type="text" name="searchQuery" placeholder="Search something" [(ngModel)]="searchQuery">
+      </form>
+    </div>
+    <div class="categories-menu">
+      <ng-container *ngFor="let category of categories">
+        <a href='/category/{{category["id"]}}'>{{category["title"]}}</a>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="header-main">
+    Featuring lots:
+  </div>
+  <div *ngIf="lots" class="main-container">
+    <ng-container *ngFor="let lot of lots">
+      <div class="card">
+        <img src='{{lot["imageUrl"]}}' style="width:100%">
+        <div class="card-container">
+          <p>{{lot["title"]}}</p>
+          <h4><b>{{lot["bid"]}}$</b></h4>
+          <a href='/lot/{{lot["id"]}}'>BUY NOW</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <footer>
+    <a *ngIf="page > 1" [routerLink]="['/home']" [queryParams]="{page: page - 1}"><<</a>
+    Page {{page}} of {{pageCount}}
+    <a *ngIf="page < pageCount" [routerLink]="['/home']" [queryParams]="{page: (page * 10 + 10) / 10}">>></a>
+  </footer>
+</div>
+</body>
+

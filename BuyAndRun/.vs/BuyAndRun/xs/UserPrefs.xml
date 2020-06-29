@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{15A785E4-DD7E-4B0D-B3BC-9E49597C73F7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DAL/Migrations/20200626211357_Six.cs">
+    <Files>
+      <File FileName="DAL/Contexts/AuctionDbContext.cs" Line="14" Column="6" />
+      <File FileName="DAL/Migrations/20200510184437_Initial.cs" />
+      <File FileName="API/Models/Lot/LotModel.cs" />
+      <File FileName="DAL/Migrations/20200510221710_One.cs" />
+      <File FileName="DAL/Migrations/20200512081015_Two.cs" />
+      <File FileName="DAL/Migrations/20200512081015_Two.Designer.cs" />
+      <File FileName="DAL/Migrations/20200512085204_Three.cs" />
+      <File FileName="DAL/Migrations/20200512085621_Four.cs" />
+      <File FileName="DAL/Migrations/20200625213256_Five.cs" Line="1" Column="1" />
+      <File FileName="DAL/Migrations/20200626211357_Six.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BuyAndRun" expanded="True">
+            <Node name="API" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Category" expanded="True" />
+                <Node name="Lot" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="BLL" expanded="True" />
+            <Node name="DAL" expanded="True">
+              <Node name="Contexts" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20200626211357_Six.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="IdentityServer" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,43 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:800i|Roboto:900&display=swap" rel="stylesheet">
+</head>
+<body>
+<ngx-spinner></ngx-spinner>
+<div class="top-bar secondary">
+  <div class="secondary-centered">
+    <div id="secondary-logo">
+      <a href="/">Buy&Run</a>
+    </div>
+    <div class="secondary-search">
+      <form (submit)="onSearch()">
+        <input type="text" name="searchQuery" placeholder="Search something" [(ngModel)]="searchQuery">
+      </form>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div *ngIf="user" class="lot-container">
+    <div class="header-main">
+      {{user["name"]}}
+    </div>
+    <div class="lot-card">
+      <div class="lot-image-container">
+        <img src='{{user["imageUrl"]}}' alt="Avatar" style="width:100%">
+      </div>
+      <div class="lot-content-container">
+        <div class="lot-content-padding">
+          <b>Your name:</b>
+          <p>{{user["name"]}}</p>
+          <b>Your username:</b>
+          <p>{{user["userName"]}}</p>
+          <b>Your email:</b>
+          <p>{{user["email"]}}</p>
+          <br>
+          <br><button (click)="onDelete()">DELETE ACCOUNT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+

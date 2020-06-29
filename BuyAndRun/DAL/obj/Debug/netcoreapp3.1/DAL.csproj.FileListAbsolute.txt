@@ -1,0 +1,12 @@
+/Users/nikita/RiderProjects/BuyAndRun/DAL/obj/Debug/netcoreapp3.1/DAL.csprojAssemblyReference.cache
+/Users/nikita/RiderProjects/BuyAndRun/DAL/obj/Debug/netcoreapp3.1/DAL.csproj.CoreCompileInputs.cache
+/Users/nikita/RiderProjects/BuyAndRun/DAL/obj/Debug/netcoreapp3.1/DAL.AssemblyInfoInputs.cache
+/Users/nikita/RiderProjects/BuyAndRun/DAL/obj/Debug/netcoreapp3.1/DAL.AssemblyInfo.cs
+/Users/nikita/RiderProjects/BuyAndRun/DAL/bin/Debug/netcoreapp3.1/DAL.deps.json
+/Users/nikita/RiderProjects/BuyAndRun/DAL/bin/Debug/netcoreapp3.1/DAL.runtimeconfig.json
+/Users/nikita/RiderProjects/BuyAndRun/DAL/bin/Debug/netcoreapp3.1/DAL.runtimeconfig.dev.json
+/Users/nikita/RiderProjects/BuyAndRun/DAL/bin/Debug/netcoreapp3.1/DAL.dll
+/Users/nikita/RiderProjects/BuyAndRun/DAL/bin/Debug/netcoreapp3.1/DAL.pdb
+/Users/nikita/RiderProjects/BuyAndRun/DAL/obj/Debug/netcoreapp3.1/DAL.dll
+/Users/nikita/RiderProjects/BuyAndRun/DAL/obj/Debug/netcoreapp3.1/DAL.pdb
+/Users/nikita/RiderProjects/BuyAndRun/DAL/obj/Debug/netcoreapp3.1/DAL.genruntimeconfig.cache
